@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Πρόσκληση για το 10ο Πάρτι Γενεθλίων!</title>
+    <title>Πρόσκληση για το Πάρτι Γενεθλίων του Δημήτρη!</title>
 
     <!-- Google Fonts for Vivid Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,7 +125,8 @@
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
-            -webkit-backface-visibility: hidden; /* Safari support */
+            -webkit-backface-visibility: hidden;
+            /* Safari support */
         }
 
         .flip-card-back {
@@ -182,16 +183,20 @@
             <div class="absolute inset-0 sunburst animate-spin-slow"></div>
 
             <!-- Interactive 3D Flip Wrapper -->
-            <div class="absolute inset-3 w-[calc(100%-24px)] h-[calc(100%-24px)] flip-container z-10" onclick="this.classList.toggle('flipped')">
+            <div class="absolute inset-3 w-[calc(100%-24px)] h-[calc(100%-24px)] flip-container z-10"
+                onclick="this.classList.toggle('flipped')">
                 <div class="flip-card-inner w-full h-full relative">
                     <!-- Front (Birthday Star) -->
-                    <div class="flip-card-front w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden bg-gray-200">
+                    <div
+                        class="flip-card-front w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden bg-gray-200">
                         <img id="kidImage" src="20250719_213807.jpg" alt="Birthday Star!"
                             class="w-full h-full object-cover scale-125">
                     </div>
                     <!-- Back ("Bruh!!!") -->
-                    <div class="flip-card-back w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden flex items-center justify-center bg-gradient-to-tr from-yellow-400 via-orange-400 to-pink-500 text-white select-none">
-                        <span style="font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;" class="text-3xl md:text-4xl font-black tracking-wider drop-shadow-md transform -rotate-12 animate-bounce-slow">Bruh!!!</span>
+                    <div
+                        class="flip-card-back w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden flex items-center justify-center bg-gradient-to-tr from-yellow-400 via-orange-400 to-pink-500 text-white select-none">
+                        <span style="font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;"
+                            class="text-3xl md:text-4xl font-black tracking-wider drop-shadow-md transform -rotate-12 animate-bounce-slow">Bruh!!!</span>
                     </div>
                 </div>
             </div>
@@ -201,18 +206,27 @@
         <div
             class="space-y-5 text-lg md:text-xl font-black text-gray-700 bg-white/50 rounded-3xl p-6 border-2 border-dashed border-pink-300">
 
-            <div class="flex items-center justify-start pl-6 md:pl-12 gap-3 transform hover:scale-110 transition duration-200">
-                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-2xl shadow-sm flex-shrink-0">📅</div>
+            <div
+                class="flex items-center justify-start pl-6 md:pl-12 gap-3 transform hover:scale-110 transition duration-200">
+                <div
+                    class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-2xl shadow-sm flex-shrink-0">
+                    📅</div>
                 <span class="text-purple-700">26 / 07 / 2026</span>
             </div>
 
-            <div class="flex items-center justify-start pl-6 md:pl-12 gap-3 transform hover:scale-110 transition duration-200">
-                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-2xl shadow-sm flex-shrink-0">⏰</div>
+            <div
+                class="flex items-center justify-start pl-6 md:pl-12 gap-3 transform hover:scale-110 transition duration-200">
+                <div
+                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-2xl shadow-sm flex-shrink-0">
+                    ⏰</div>
                 <span class="text-blue-700">19:30</span>
             </div>
 
-            <div class="flex items-center justify-start pl-6 md:pl-12 gap-3 transform hover:scale-110 transition duration-200">
-                <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-2xl shadow-sm flex-shrink-0">📍</div>
+            <div
+                class="flex items-center justify-start pl-6 md:pl-12 gap-3 transform hover:scale-110 transition duration-200">
+                <div
+                    class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-2xl shadow-sm flex-shrink-0">
+                    📍</div>
                 <span class="text-pink-600 text-left leading-tight">
                     Cake &amp; Roll, Πλατεία Βενιζέλου<br>
                     <span class="text-sm md:text-base text-gray-500">Κορυδαλλός</span>
@@ -225,14 +239,14 @@
         <div class="mt-8 flex flex-row items-center justify-center gap-4">
             <!-- Fireworks Celebration Button -->
             <button onclick="triggerCelebration()"
-                class="relative w-16 h-16 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 border-4 border-white flex items-center justify-center text-3xl shadow-lg hover:scale-110 hover:-translate-y-1 active:scale-95 transition-all duration-200 cursor-pointer" 
+                class="relative w-16 h-16 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 border-4 border-white flex items-center justify-center text-3xl shadow-lg hover:scale-110 hover:-translate-y-1 active:scale-95 transition-all duration-200 cursor-pointer"
                 title="Πυροτεχνήματα!">
                 🎆
             </button>
 
             <!-- Playful Music Toggle Button (rounded rectangle / wider) -->
-            <button id="musicToggle" onclick="toggleMusic()" 
-                class="relative px-6 h-16 rounded-3xl bg-gradient-to-r from-pink-500 to-orange-400 border-4 border-white flex items-center justify-center gap-2 text-2xl font-black text-white shadow-lg hover:scale-110 hover:-translate-y-1 active:scale-95 transition-all duration-200 cursor-pointer" 
+            <button id="musicToggle" onclick="toggleMusic()"
+                class="relative px-6 h-16 rounded-3xl bg-gradient-to-r from-pink-500 to-orange-400 border-4 border-white flex items-center justify-center gap-2 text-2xl font-black text-white shadow-lg hover:scale-110 hover:-translate-y-1 active:scale-95 transition-all duration-200 cursor-pointer"
                 title="Μουσική">
                 <span id="musicIcon">🎵</span>
                 <span class="text-base md:text-lg tracking-wider select-none">ΜΟΥΣΙΚΗ</span>
@@ -240,7 +254,7 @@
 
             <!-- Emoji Pop Button -->
             <button onclick="triggerEmojiPop()"
-                class="relative w-16 h-16 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 border-4 border-white flex items-center justify-center text-3xl shadow-lg hover:scale-110 hover:-translate-y-1 active:scale-95 transition-all duration-200 cursor-pointer" 
+                class="relative w-16 h-16 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 border-4 border-white flex items-center justify-center text-3xl shadow-lg hover:scale-110 hover:-translate-y-1 active:scale-95 transition-all duration-200 cursor-pointer"
                 title="Έκρηξη Emoji!">
                 🥳
             </button>
@@ -257,10 +271,10 @@
             var btn = document.getElementById('musicToggle');
             var icon = document.getElementById('musicIcon');
             if (audio) {
-                audio.play().then(function() {
+                audio.play().then(function () {
                     if (icon) icon.innerHTML = '🎵';
                     if (btn) btn.classList.add('animate-pulse');
-                }).catch(function(error) {
+                }).catch(function (error) {
                     console.log("Autoplay was prevented by the browser:", error);
                     if (icon) icon.innerHTML = '🔇';
                     if (btn) btn.classList.remove('animate-pulse');
@@ -314,10 +328,10 @@
             var icon = document.getElementById('musicIcon');
             if (audio && btn) {
                 if (audio.paused) {
-                    audio.play().then(function() {
+                    audio.play().then(function () {
                         if (icon) icon.innerHTML = '🎵';
                         btn.classList.add('animate-pulse');
-                    }).catch(function(error) {
+                    }).catch(function (error) {
                         console.log("Play failed:", error);
                     });
                 } else {
@@ -337,7 +351,7 @@
             var emojiEl = document.createElement('div');
             emojiEl.innerText = emojis[Math.floor(Math.random() * emojis.length)];
             emojiEl.style.position = 'absolute';
-            
+
             var x = Math.random() * 80 + 10; // 10% to 90%
             var y = Math.random() * 80 + 10; // 10% to 90%
             emojiEl.style.left = x + '%';
@@ -353,31 +367,31 @@
             card.appendChild(emojiEl);
 
             // Trigger animation
-            setTimeout(function() {
+            setTimeout(function () {
                 emojiEl.style.opacity = '1';
                 emojiEl.style.transform = 'scale(1.2) translateY(-40px)';
             }, 50);
 
             // Fade out and cleanup
-            setTimeout(function() {
+            setTimeout(function () {
                 emojiEl.style.opacity = '0';
                 emojiEl.style.transform = 'scale(0.8) translateY(-80px)';
-                setTimeout(function() {
+                setTimeout(function () {
                     emojiEl.remove();
                 }, 500);
             }, 1000 + Math.random() * 500);
         }
 
         // Tap/Click to throw confetti at coordinate points
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             // Avoid triggering when clicking buttons, inputs, or the main clickable kid's image
             if (event.target.closest('button') || event.target.closest('input') || event.target.closest('img') || event.target.closest('a')) {
                 return;
             }
-            
+
             var x = event.clientX / window.innerWidth;
             var y = event.clientY / window.innerHeight;
-            
+
             confetti({
                 particleCount: 20,
                 spread: 60,
