@@ -301,42 +301,38 @@
             var card = document.getElementById('mainCard');
             if (!card) return;
 
-            for (var i = 0; i < 20; i++) {
-                (function() {
-                    var emojiEl = document.createElement('div');
-                    emojiEl.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-                    emojiEl.style.position = 'absolute';
-                    
-                    var x = Math.random() * 80 + 10; // 10% to 90%
-                    var y = Math.random() * 80 + 10; // 10% to 90%
-                    emojiEl.style.left = x + '%';
-                    emojiEl.style.top = y + '%';
-                    emojiEl.style.fontSize = Math.floor(Math.random() * 24 + 24) + 'px';
-                    emojiEl.style.userSelect = 'none';
-                    emojiEl.style.pointerEvents = 'none';
-                    emojiEl.style.zIndex = '30';
-                    emojiEl.style.transition = 'all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-                    emojiEl.style.opacity = '0';
-                    emojiEl.style.transform = 'scale(0.3) translateY(20px)';
+            var emojiEl = document.createElement('div');
+            emojiEl.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            emojiEl.style.position = 'absolute';
+            
+            var x = Math.random() * 80 + 10; // 10% to 90%
+            var y = Math.random() * 80 + 10; // 10% to 90%
+            emojiEl.style.left = x + '%';
+            emojiEl.style.top = y + '%';
+            emojiEl.style.fontSize = Math.floor(Math.random() * 24 + 36) + 'px'; // 36px to 60px
+            emojiEl.style.userSelect = 'none';
+            emojiEl.style.pointerEvents = 'none';
+            emojiEl.style.zIndex = '30';
+            emojiEl.style.transition = 'all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            emojiEl.style.opacity = '0';
+            emojiEl.style.transform = 'scale(0.3) translateY(20px)';
 
-                    card.appendChild(emojiEl);
+            card.appendChild(emojiEl);
 
-                    // Trigger animation
-                    setTimeout(function() {
-                        emojiEl.style.opacity = '1';
-                        emojiEl.style.transform = 'scale(1.2) translateY(-40px)';
-                    }, 50);
+            // Trigger animation
+            setTimeout(function() {
+                emojiEl.style.opacity = '1';
+                emojiEl.style.transform = 'scale(1.2) translateY(-40px)';
+            }, 50);
 
-                    // Fade out and cleanup
-                    setTimeout(function() {
-                        emojiEl.style.opacity = '0';
-                        emojiEl.style.transform = 'scale(0.8) translateY(-80px)';
-                        setTimeout(function() {
-                            emojiEl.remove();
-                        }, 500);
-                    }, 1000 + Math.random() * 500);
-                })();
-            }
+            // Fade out and cleanup
+            setTimeout(function() {
+                emojiEl.style.opacity = '0';
+                emojiEl.style.transform = 'scale(0.8) translateY(-80px)';
+                setTimeout(function() {
+                    emojiEl.remove();
+                }, 500);
+            }, 1000 + Math.random() * 500);
         }
 
         // Tap/Click to throw confetti at coordinate points
